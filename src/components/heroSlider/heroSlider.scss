@@ -1,0 +1,24 @@
+.carousel.carousel-slider .control-arrow,
+.carousel-status {
+  display: none;
+}
+
+.carousel .thumbs-wrapper {
+  margin: 5px;
+}
+
+.carousel .thumb {
+  border-radius: 8px;
+}
+
+.control-dots {
+  .dot {
+    box-shadow: unset !important;
+    opacity: 1 !important;
+    background-color: white;
+
+    &.selected {
+      background-color: var(--primary-color);
+    }
+  }
+}
