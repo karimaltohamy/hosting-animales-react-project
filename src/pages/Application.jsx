@@ -8,7 +8,8 @@ const Application = () => {
     <Fragment>
       <Header />
       <Outlet />
-      <Navbar />
+      {/* <Navbar /> */}
+
     </Fragment>
   );
 };

@@ -1,1 +1,6 @@
-{ "home": "الرئيسيه" }
+{
+  "home": "الرئيسيه",
+  "top-rated-hotels" : "افضل فنادقنا",
+  "most-popular-hostingers" : "المضيفين الاكثر شعبية" ,
+  "book_now" : "احجز الان"
+}

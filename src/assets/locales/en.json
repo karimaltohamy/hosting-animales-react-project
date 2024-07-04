@@ -1,1 +1,6 @@
-{ "home": "Home" }
+{
+  "home": "Home",
+  "top-rated-hotels": "Our Best Hotels",
+  "most-popular-hostingers": "most popular hostingers" ,
+   "book_now" : "Book Now"
+}
