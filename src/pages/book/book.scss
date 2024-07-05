@@ -1,13 +1,146 @@
-@import "../../assets/variables.scss" ;
+@import "../../assets/variables.scss";
 
-.single{
-    min-height: 580vh;
-    .img{
-        background-image: url("../../assets/images/banner.jpg");
+.single {
+  min-height: 580vh;
+  .img {
+    background-image: url("../../assets/images/banner.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    background-attachment: fixed;
+  }
+  .big {
+    margin-top: 60px;
+    display: flex;
+    gap: 20px;
+    .line {
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .line1 {
+      flex-grow: 1;
+      flex-basis: 80%;
+      .box {
+        display: flex;
+      }
+      .box1 {
+        justify-content: space-between;
+        align-items: center;
+        .con1 {
+          & > h1 {
+            color: $main-Color;
+            font-size: 40px;
+            text-transform: capitalize;
+          }
+          & > h4 {
+            text-transform: capitalize;
+            color: $main-Color2;
+            font-size: 18px;
+            margin-bottom: 20px;
+          }
+        }
+        .con2 {
+          .rate {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .inside > h1 {
+              color: $main-Color;
+              font-size: 20px;
+              text-transform: capitalize;
+            }
+            .inside > p {
+              text-transform: capitalize;
+              color: $main-Color2;
+              font-size: 14px;
+            }
+            .outOfFive {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: $main-Color;
+              padding: 2px 4px;
+              color: white;
+              border-radius: 10px;
+              font-weight: 600;
+            }
+          }
+          h5 {
+            color: $font-ddd;
+            font-weight: bold;
+          }
+        }
+      }
+      .box2 {
+        border-top: 1px solid $font-ddd;
+        border-bottom: 1px solid $font-ddd;
+        gap: 40px;
+        padding: 30px 0px;
+        align-items: center;
+        .inside {
+          .flex {
+            align-items: center;
+            gap: 10px;
+            i {
+              font-size: 40px;
+              color: $main-Color;
+            }
+            .con {
+              p:first-of-type {
+                font-size: 20px;
+                color: $main-Color;
+              }
+              p {
+                color: $font-ddd;
+              }
+            }
+          }
+        }
+      }
+    }
+    .line2 {
+      flex-basis: 20%;
+    }
+  }
+}
+
+// slider line 1
+
+.box3 {
+  margin-top: 40px;
+  gap: 20px;
+  .swiper {
+    width: 300px;
+    height: 300px;
+    .swiper-wrapper {
+      .swiper-slide {
         background-position: center;
         background-size: cover;
-        background-repeat: no-repeat;
-        height: 70vh;
-        background-attachment:fixed;
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+
+  .heading {
+    p {
+      color: $font-ddd;
+    }
+  }
+}
+
+.line2{
+    .pref{
+        padding:5px 10px ;
+        border-radius: 8px;
+        border: 2px solid $font-ddd;
+        display: flex;
+        align-items: center;
+        gap: 20px;
     }
 }
