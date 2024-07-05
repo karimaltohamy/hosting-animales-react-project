@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import "./book.scss";
 
 function Book() {
   return (
-    <div>
-      <h1>rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr</h1>
+    <div className="single">
+      <div className="img"></div>
+      <div className="big">
+        
+      </div>
     </div>
-  )
+  );
 }
 
-export default Book
+export default Book;
