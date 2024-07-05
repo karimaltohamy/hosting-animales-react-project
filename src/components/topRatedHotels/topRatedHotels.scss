@@ -24,6 +24,7 @@
         background-color: white;
         border-radius: 10px;
         padding: 20px;
+        box-shadow: 0px 0px 10px white;
         &:hover {
           .overFlow {
             transform: translateY(0) !important;
@@ -49,7 +50,7 @@
           }
           .icon {
             font-size: 25px;
-            color: white;
+            color: $main-Color2;
             z-index: 500;
             &:hover {
               color: red ;
@@ -59,8 +60,8 @@
             }
             transition: $transtions;
             cursor: pointer;
-            right: 2%;
-            bottom: 5%;
+            left: 5%;
+            top: 5%;
           }
           p.discount {
             right: 2%;

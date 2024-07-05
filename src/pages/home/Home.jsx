@@ -4,6 +4,7 @@ import SearchSection from "../../components/searchSection/SearchSection";
 import TopRatedHotels from "../../components/topRatedHotels/TopRatedHotels";
 import TopRatedPeople from "../../components/topRatedPeople/TopRatedPeople";
 import Training from "../../components/ourTraining/Training";
+import Clinics from "../../components/ourClinics/Clinics";
 
 
 
@@ -15,6 +16,7 @@ const Home = () => {
       <TopRatedHotels/>
       <TopRatedPeople />
       <Training/>
+      <Clinics/>
     </div>
   );
 };
