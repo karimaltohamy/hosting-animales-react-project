@@ -43,7 +43,7 @@ function Footer() {
               </a>
             </div>
           </div>
-          <p>© 2022. All rights reserved by 5Code.</p>
+          <p>© 2024. All rights reserved by 5Code.</p>
         </div>
       </div>
     </footer>
