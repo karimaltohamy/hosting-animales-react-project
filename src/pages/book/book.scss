@@ -2,6 +2,7 @@
 
 .single {
   min-height: 580vh;
+  position: relative;
   .img {
     background-image: url("../../assets/images/banner.jpg");
     background-position: center;
@@ -17,10 +18,11 @@
     .line {
       border-radius: 10px;
       padding: 20px;
+
     }
     .line1 {
       flex-grow: 1;
-      flex-basis: 80%;
+      max-width: 80%;
       .box {
         display: flex;
       }
@@ -75,10 +77,15 @@
       .box2 {
         border-top: 1px solid $font-ddd;
         border-bottom: 1px solid $font-ddd;
-        gap: 40px;
+        gap: 20px;
         padding: 30px 0px;
         align-items: center;
+        flex-wrap: wrap;
         .inside {
+            background-color: $section-color;
+            padding: 5px 10px;
+            border-radius: 10px;
+            flex-grow: 1;
           .flex {
             align-items: center;
             gap: 10px;
@@ -109,10 +116,10 @@
 
 .box3 {
   margin-top: 40px;
-  gap: 20px;
   .swiper {
-    width: 300px;
-    height: 300px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: 400px;
     .swiper-wrapper {
       .swiper-slide {
         background-position: center;
@@ -128,19 +135,168 @@
   }
 
   .heading {
+    flex-basis: 70%;
     p {
       color: $font-ddd;
     }
   }
 }
 
-.line2{
-    .pref{
-        padding:5px 10px ;
-        border-radius: 8px;
-        border: 2px solid $font-ddd;
-        display: flex;
+.line2 {
+  position: relative;
+  .pref {
+    padding: 5px 10px;
+    border: 2px solid $font-ddd;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .equations {
+    .part,
+    .end {
+      h1 {
+        text-transform: capitalize;
+      }
+      padding: 20px 10px;
+      border-width: 0px 2px 2px 2px;
+      border-style: solid;
+      border-color: $font-ddd;
+    }
+    .part3,
+    .part4 {
+      display: flex;
+      justify-content: space-between;
+      span {
+        border-radius: 50%;
+        width: 20px;
+        display: inline-flex;
+        justify-content: center;
         align-items: center;
-        gap: 20px;
+        height: 20px;
+        border: 2px solid $main-Color;
+        background-color: $main-Color;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+        &:nth-of-type(2) {
+          border: none;
+          border-radius: 0;
+          background-color: transparent;
+          color: $font-ddd;
+        }
+      }
+    }
+    .from {
+      span {
+        text-decoration: line-through;
+        font-size: 14px;
+        color: $main-Color;
+      }
+    }
+    .end {
+      text-align: center;
+      button {
+        background-color: $main-Color;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 8px;
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
+  .trigger {
+    display: none;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: white;
+    font-size: 22px;
+    background-color: $main-Color;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: white;
+  }
+}
+
+@media (max-width: 1400px) {
+  .single {
+    .big {
+        .line1{
+            max-width: 100%;
+        }
+      .line2 {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+        &.show {
+          transform: translateY(0);
+        }
+        border-radius: 0;
+        width: 320px;
+        z-index: 1000;
+        background-color: white;
+        border-top-right-radius: 10px;
+        .text {
+          color: black;
+          font-size: 20px;
+        }
+        .trigger {
+          display: block;
+        }
+        .pref ,.part , .end{
+            border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1399px) {
+  .single {
+    .big {
+      .line2 {
+        transition: $transtions;
+      }
+    }
+  }
+}
+
+@media(max-width: 700px) {
+    .single{
+        .big{
+            .line1{
+                .box1{
+                    flex-direction: column;
+                    align-items: start;
+                    h4{
+                        margin-bottom: 0 !important;
+                    }
+                }
+                .box2{
+                    .inside{
+                        // flex-grow: 0;
+                        i{
+                            font-size: 20px !important;
+                        }
+                        p{
+                            font-size: 20px;
+                            &:last-of-type{
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                    align-items: start;
+                }
+                .box3{
+                    flex-direction: column;
+                    .swiper{
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 }
+

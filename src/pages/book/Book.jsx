@@ -15,7 +15,9 @@ import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 
 function Book() {
-    const  [date, setDate] = useState()
+  const [date, setDate] = useState();
+  const [num, setNum] = useState(1);
+  const [show, setShow] = useState(false);
   return (
     <div className="single">
       <div className="img"></div>
@@ -69,18 +71,7 @@ function Book() {
                 </div>
               </div>
             </div>
-            <div className="box box3">
-              <div className="heading">
-                <h1 className="Smaller">over View</h1>
-                <p>
-                  Start and end in San Francisco! With the in-depth cultural
-                  tour Northern California Summer 2019, you have a 8 day tour
-                  package taking you through San Francisco, USA and 9 other
-                  destinations in USA. Northern California Summer 2019 includes
-                  accommodation as well as an expert guide, meals, transport and
-                  more.
-                </p>
-              </div>
+            <div className="box3">
               <Swiper
                 effect={"cube"}
                 grabCursor={true}
@@ -106,28 +97,65 @@ function Book() {
                   );
                 })}
               </Swiper>
+              <div className="heading">
+                <h1 className="Smaller">over View</h1>
+                <p>
+                  Start and end in San Francisco! With the in-depth cultural
+                  tour Northern California Summer 2019, you have a 8 day tour
+                  package taking you through San Francisco, USA and 9 other
+                  destinations in USA. Northern California Summer 2019 includes
+                  accommodation as well as an expert guide, meals, transport and
+                  more.
+                </p>
+              </div>
             </div>
           </div>
-          <div className="line2 line">
+          <div className={`line2 line ${show ? "show" : ""}`}>
             <div className="pref">
-            <i className="fa-regular fa-user icon"></i>
-            <div className="heading">
-                <h1 className="Smaller">
-                    customer 01
-                </h1>
-                <h4 className="Smaller">
-                    member since may 2024
-                </h4>
-            </div>
+              <i className="fa-regular fa-user icon"></i>
+              <div className="heading">
+                <h1 className="Smaller">customer 01</h1>
+                <h4 className="Smaller">member since may 2024</h4>
+              </div>
             </div>
             <div className="equations">
-                <div className="part part1">
-                    <h1 className="from">From <span>$2000</span></h1>
-                    <h1 className="to">To <span>$200</span></h1>
+              <div className="part part1">
+                <h1 className="from">
+                  From :<span className="text">$2000</span>
+                </h1>
+                <h1 className="to">
+                  To :<span className="text">$200</span>
+                </h1>
+              </div>
+              <div className="part part2">
+                <h1>pick Date :</h1>
+                <h1 className="text"> {date || "07/13/2024 to 07/13/2024"}</h1>
+              </div>
+              <div className="part part3">
+                <h1>number of Pets : </h1>
+                <div className="counter">
+                  <span>-</span>
+                  <span>{num}</span>
+                  <span>+</span>
                 </div>
-                <div className="part part2">
-
-                </div>
+              </div>
+              <div className="part part4">
+                <h1>Total : </h1>
+                <h1 className="text">$1,100</h1>
+              </div>
+              <div className="end">
+                <button className="book">BOOK NOW</button>
+              </div>
+            </div>
+            <div className="trigger">
+              <button className="here" onClick={() => setShow(!show)}>
+                Book Here{" "}
+                <i
+                  className={`fa-solid ${
+                    show ? "fa-arrow-down fa-shake" : "fa-arrow-up fa-shake"
+                  }`}
+                ></i>{" "}
+              </button>
             </div>
           </div>
         </div>
