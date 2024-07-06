@@ -1,3 +1,5 @@
+@import "../../assets/variables.scss";
+
 .search_section {
   padding: 15px;
 
@@ -14,7 +16,7 @@
       gap: 5px;
 
       &.active {
-        background-color: var(--primary-color);
+        background-color: $main-Color;
       }
 
       span {

@@ -1,0 +1,140 @@
+@import "../../assets/variables.scss";
+
+.topPeople {
+  margin-top: 60px;
+  .container {
+    & > h1 {
+      color: $main-Color;
+      font-size: 40px;
+      text-transform: capitalize;
+    }
+    & > h4 {
+      text-transform: capitalize;
+      color: $main-Color2;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.topPeople .container .all {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  .sox {
+    text-align: center;
+    box-shadow: 0px 0px 20px #ddd;
+    overflow: hidden;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    &:hover {
+      .image::after {
+        border-width: 0px 500px 70px 0px;
+      }
+      .image::before{
+        transform: translateY(0);
+      }
+    }
+    .image {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #f1775567;
+        transition: $transtions;
+        transform: translateY(-100%);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-width: 0px 0px 100px 0px;
+        border-color: transparent transparent white transparent;
+        transition: $transtions;
+      }
+      img{
+        height: 250px;
+        width: 100%;
+      }
+      .flow {
+        position: absolute;
+      }
+      .icon {
+        font-size: 25px;
+        color: $main-Color2;
+        z-index: 500;
+        &:hover {
+          color:red;
+        }
+        &.click {
+          color: red;
+        }
+        transition: $transtions;
+        cursor: pointer;
+        left: 5%;
+        top: 5%;
+      }
+    }
+    .con {
+      margin-top: 20px;
+      padding: 0px 20px;
+
+      h2 {
+        position: relative;
+        width: fit-content;
+      }
+      p {
+        text-align: start;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #ddd;
+      }
+      .info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1{
+          font-size: 20px;
+          color: $font-ddd;
+        }
+        a {
+          width: fit-content;
+          padding: 5px 20px;
+          border: 2px solid $main-Color;
+          display: block;
+          background: linear-gradient(to right, $main-Color 50%, white 50%);
+          background-size: 200% 100%;
+          background-position: right bottom;
+          font-weight: bold;
+          color: $main-Color !important;
+          font-size: 20px;
+          transition: $transtions;
+          border-radius: 8px;
+          margin-top: 10px;
+        }
+      }
+    }
+    &:hover {
+      .info{
+        a {
+          background-position: left bottom !important;
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width : 600px) {
+    .topPeople{
+        .container{
+            h1{
+                font-size: 25px;
+            }
+        }
+    }
+}

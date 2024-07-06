@@ -26,7 +26,8 @@ const SearchSection = () => {
     }
   };
   return (
-    <div className="mt-4  rounded-lg border-2 border-primary search_section">
+    <div className="container">
+          <div className="mt-4  rounded-lg border-2 border-primary search_section">
       <div className="categories flex items-center justify-center flex-wrap gap-1">
         <div className="item active">
           <MdOutlineHotel size={18} />
@@ -73,6 +74,7 @@ const SearchSection = () => {
         )}
       </div>
       <button className="btn_submit">Search</button>
+    </div>
     </div>
   );
 };

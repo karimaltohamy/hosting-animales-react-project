@@ -16,13 +16,8 @@ function App() {
     }
   }, []);
 
-  return mobile ? (
-    <RouterProvider router={router} />
-  ) : (
-    <p className="text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-      {t("being processing now")}
-    </p>
-  );
+  return <RouterProvider router={router} />
+  
 }
 
 export default App;

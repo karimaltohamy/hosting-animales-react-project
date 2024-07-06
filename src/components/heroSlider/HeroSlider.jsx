@@ -9,7 +9,8 @@ import "./heroSlider.scss";
 
 const HeroSlider = () => {
   return (
-    <div className="slide-container rounded-[12px] overflow-hidden bg-white px-5 pt-7 pb-5 -mt-[70px] shadow-lg border border-gray-200">
+    <div className="container">
+          <div className="slide-container rounded-[12px] overflow-hidden bg-white px-5 pt-7 pb-5 -mt-[70px] shadow-lg border border-gray-200">
       <Carousel>
         <div className="rounded-lg overflow-hidden">
           <img
@@ -44,6 +45,7 @@ const HeroSlider = () => {
           />
         </div>
       </Carousel>
+    </div>
     </div>
   );
 };
