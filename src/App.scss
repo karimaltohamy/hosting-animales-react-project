@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap");
 
-@import "./assets/variables.scss" ;
+@import "./assets/variables.scss";
 
 * {
   margin: 0;
@@ -12,44 +12,9 @@ html {
   overflow-x: hidden;
 }
 
-
-// style Jemy
-.heading{
-  & > h1 {
-    color: $main-Color;
-    font-size: 40px;
-    text-transform: capitalize;
-    &.Smaller{
-      font-size: 20px !important;
-      font-weight: bold;
-    }
-  }
-  & > h4 {
-    text-transform: capitalize;
-    color: $main-Color2;
-    font-size: 18px;
-    margin-bottom: 20px;
-    &.Smaller{
-      font-size: 14px !important;
-      font-weight: bold;
-      margin-bottom: 0;
-    }
-  }
+:root {
+  --primary-color: #f17855;
 }
-
-.icon{
-  font-size: 40px;
-  color: $main-Color;
-}
-
-.text{
-  color:  $font-ddd ;
-  font-size: 15px;
-}
-
-// style Jemy
-
-
 
 body {
   font-family: "Cairo", sans-serif !important;
@@ -65,7 +30,43 @@ body {
   }
 }
 
-.container{
+// style Jemy
+.heading {
+  & > h1 {
+    color: $main-Color;
+    font-size: 40px;
+    text-transform: capitalize;
+    &.Smaller {
+      font-size: 20px !important;
+      font-weight: bold;
+    }
+  }
+  & > h4 {
+    text-transform: capitalize;
+    color: $main-Color2;
+    font-size: 18px;
+    margin-bottom: 20px;
+    &.Smaller {
+      font-size: 14px !important;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.icon {
+  font-size: 40px;
+  color: $main-Color;
+}
+
+.text {
+  color: $font-ddd;
+  font-size: 15px;
+}
+
+// style Jemy
+
+.container {
   width: 90% !important;
   margin: 0 auto;
 }

@@ -9,8 +9,8 @@ const Application = () => {
     <Fragment>
       <Header />
       <Outlet />
-      {/* <Navbar /> */}
-      <Footer/>
+      {window.innerWidth <= 900 && <Navbar />}
+      <Footer />
     </Fragment>
   );
 };

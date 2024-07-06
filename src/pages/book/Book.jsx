@@ -72,7 +72,7 @@ function Book() {
               </div>
             </div>
             <div className="box3">
-              <Swiper
+              {/*<Swiper
                 effect={"cube"}
                 grabCursor={true}
                 loop={true}
@@ -96,7 +96,7 @@ function Book() {
                     </SwiperSlide>
                   );
                 })}
-              </Swiper>
+              </Swiper>*/}
               <div className="heading">
                 <h1 className="Smaller">over View</h1>
                 <p>

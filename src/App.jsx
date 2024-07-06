@@ -6,18 +6,25 @@ import { useTranslation } from "react-i18next";
 
 function App() {
   const [mobile, setMobile] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    if (window.innerWidth <= 900) {
-      setMobile(true);
+    if (localStorage.getItem("lang") == "ar") {
+      i18n.changeLanguage("ar");
+      document.body.classList.add("ar");
+      document.body.classList.remove("en");
+    } else if (localStorage.getItem("lang") == "en") {
+      i18n.changeLanguage("en");
+      document.body.classList.add("en");
+      document.body.classList.remove("ar");
     } else {
-      setMobile(false);
+      i18n.changeLanguage("ar");
+      document.body.classList.add("ar");
+      document.body.classList.remove("en");
     }
   }, []);
 
-  return <RouterProvider router={router} />
-  
+  return <RouterProvider router={router} />;
 }
 
 export default App;

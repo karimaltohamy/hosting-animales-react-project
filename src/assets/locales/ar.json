@@ -1,6 +1,11 @@
 {
   "home": "الرئيسيه",
-  "top-rated-hotels" : "افضل فنادقنا",
-  "most-popular-hostingers" : "المضيفين الاكثر شعبية" ,
-  "book_now" : "احجز الان"
+  "top-rated-hotels": "افضل فنادقنا",
+  "most-popular-hostingers": "المضيفين الاكثر شعبية",
+  "book_now": "احجز الان",
+  "favorites": "المفضلة",
+  "email": "بريد إلكتروني",
+  "phone": "هاتف",
+  "Country": "دولة",
+  "City": "مدينة"
 }

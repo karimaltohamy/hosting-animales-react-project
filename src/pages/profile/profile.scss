@@ -1,0 +1,19 @@
+.items {
+  .item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgb(224, 224, 224);
+    }
+
+    div {
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    span {
+      color: gray;
+      font-weight: 600;
+    }
+  }
+}

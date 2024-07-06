@@ -1,14 +1,9 @@
-@import "../../assets/variables.scss" ;
-
+@import "../../assets/variables.scss";
 
 header {
-  // padding: 30px 10px 100px;
+  padding: 20px 10px;
   position: relative;
   z-index: 100;
   color: white;
-  background: linear-gradient(
-    180deg,
-    $main-Color2 0%,
-    $main-Color 50%
-  );
+  background: linear-gradient(180deg, $main-Color2 0%, $main-Color 50%);
 }
