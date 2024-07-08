@@ -26,7 +26,6 @@ const Header = () => {
     window.location.reload();
   };
 
-  console.log(i18n.language);
   return (
     <header className="mb-5">
       <div className="container">
@@ -66,13 +65,13 @@ const Header = () => {
                 className="w-[30px] h-[30px] object-cover rounded-full"
               />
             </div>
-            <button>
+            <Link to={"/profile"}>
               <img
                 src={profileImg}
                 alt="profileImg"
                 className="w-[30px] h-[30px] object-cover rounded-full"
               />
-            </button>
+            </Link>
           </div>
         </div>
         <div className="flex items-center justify-between mobile">

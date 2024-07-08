@@ -1,5 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Application, Favorite, Home, Login, Profile } from "../pages";
+import {
+  Accounts,
+  Application,
+  Favorite,
+  General,
+  Home,
+  Login,
+  Profile,
+  RequestData,
+} from "../pages";
 import App from "../App.jsx";
 import Loading from "../components/loading/Loading.jsx";
 import { Suspense } from "react";
@@ -30,6 +39,32 @@ export const router = createBrowserRouter([
             <Profile />
           </Suspense>
         ),
+        children: [
+          {
+            path: "accounts",
+            element: (
+              <Suspense fallback={<Loading />}>
+                <Accounts />
+              </Suspense>
+            ),
+          },
+          {
+            path: "general",
+            element: (
+              <Suspense fallback={<Loading />}>
+                <General />
+              </Suspense>
+            ),
+          },
+          {
+            path: "request-data",
+            element: (
+              <Suspense fallback={<Loading />}>
+                <RequestData />
+              </Suspense>
+            ),
+          },
+        ],
       },
       {
         path: "/favorite",

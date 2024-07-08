@@ -7,5 +7,20 @@
   "email": "Email",
   "phone": "Phone",
   "Country": "Country",
-  "City": "City"
+  "City": "City",
+  "general": "General",
+  "accounts": "Accounts",
+  "request_data": "Request Data",
+  "change_password": "Change Password",
+  "address": "Address",
+  "gender": "Gender",
+  "the_bank": "The Bank",
+  "transaction_number": "Transaction Number",
+  "applicant": "Accounts",
+  "order_cost": "Order Cost",
+  "date_of_application": "Date Of Application",
+  "status": "Status",
+  "animal_type": "Animal Type",
+  "hosting_duration": "Hosting Duration",
+  "price": "Price"
 }

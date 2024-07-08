@@ -7,5 +7,20 @@
   "email": "بريد إلكتروني",
   "phone": "هاتف",
   "Country": "دولة",
-  "City": "مدينة"
+  "City": "مدينة",
+  "general": "عام",
+  "accounts": "حسابات",
+  "request_data": "طلب البيانات",
+  "change_password": "تغيير كلمة المرور",
+  "address": "عنوان",
+  "gender": "الجنس",
+  "the_bank": "البنك",
+  "transaction_number": "رقم المعاملة",
+  "applicant": "صاحب الطلب ",
+  "order_cost": "تكلفة الطلب ",
+  "date_of_application": "تاريخ الطلب",
+  "status": "الحالة",
+  "animal_type": "نوع الحيوان ",
+  "hosting_duration": "مددة الاستضافة ",
+  "price": "السعر"
 }
