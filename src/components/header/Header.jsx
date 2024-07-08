@@ -30,7 +30,52 @@ const Header = () => {
   return (
     <header className="mb-5">
       <div className="container">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between web">
+          <Link to={"/"}>
+            <GiAnimalSkull size={55} />
+          </Link>
+
+          <div className="links">
+            <Link to={"/"} className="link">
+              Home
+            </Link>
+            <Link to={"/"} className="link">
+              Hotel
+            </Link>
+            <Link to={"/"} className="link">
+              Persons
+            </Link>
+            <Link to={"/"} className="link">
+              Exercises
+            </Link>
+            <Link to={"/"} className="link">
+              Treatment
+            </Link>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <div
+              className="rounded-full"
+              onClick={() =>
+                changeLanguage(i18n.language == "ar" ? "en" : "ar")
+              }
+            >
+              <img
+                src={i18n.language == "ar" ? enImg : arImg}
+                alt="profileImg"
+                className="w-[30px] h-[30px] object-cover rounded-full"
+              />
+            </div>
+            <button>
+              <img
+                src={profileImg}
+                alt="profileImg"
+                className="w-[30px] h-[30px] object-cover rounded-full"
+              />
+            </button>
+          </div>
+        </div>
+        <div className="flex items-center justify-between mobile">
           <div
             className="rounded-full"
             onClick={() => changeLanguage(i18n.language == "ar" ? "en" : "ar")}
@@ -43,9 +88,13 @@ const Header = () => {
           </div>
           <Link to={"/"}>
             <GiAnimalSkull size={55} />
-          </Link>{" "}
+          </Link>
           <button>
-            <MdOutlineLanguage size={30} className="!w-[30px]" />
+            <img
+              src={profileImg}
+              alt="profileImg"
+              className="w-[30px] h-[30px] object-cover rounded-full"
+            />
           </button>
         </div>
       </div>
