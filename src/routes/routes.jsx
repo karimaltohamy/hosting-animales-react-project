@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+<<<<<<< HEAD
 import {
   Accounts,
   Application,
@@ -10,9 +11,13 @@ import {
   RequestData,
 } from "../pages";
 import App from "../App.jsx";
+=======
+import { Application, Favorite, Home, Login, Profile } from "../pages";
+>>>>>>> b23c16f4093e2740b54bca8a5b08b464ab2b655c
 import Loading from "../components/loading/Loading.jsx";
 import { Suspense } from "react";
 import Book from "../pages/book/Book.jsx";
+import LoginAsHostinger from "../pages/loginAs/LoginAsHostinger.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -89,6 +94,14 @@ export const router = createBrowserRouter([
     element: (
       <Suspense fallback={<Loading />}>
         <Login />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/loginAsHostinger",
+    element: (
+      <Suspense fallback={<Loading />}>
+        <LoginAsHostinger />
       </Suspense>
     ),
   },
