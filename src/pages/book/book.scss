@@ -1,5 +1,12 @@
 @import "../../assets/variables.scss";
 
+
+body.ar{
+  .slider-wrapper{
+    direction: rtl !important;
+  }
+}
+
 .single {
   min-height: 580vh;
   position: relative;
@@ -15,11 +22,6 @@
     margin-top: 60px;
     display: flex;
     gap: 20px;
-    .line {
-      border-radius: 10px;
-      padding: 20px;
-
-    }
     .line1 {
       flex-grow: 1;
       max-width: 80%;
@@ -39,7 +41,7 @@
             text-transform: capitalize;
             color: $main-Color2;
             font-size: 18px;
-            margin-bottom: 20px;
+            // margin-bottom: 20px;
           }
         }
         .con2 {
@@ -74,229 +76,269 @@
           }
         }
       }
-      .box2 {
-        border-top: 1px solid $font-ddd;
-        border-bottom: 1px solid $font-ddd;
-        gap: 20px;
-        padding: 30px 0px;
+    }
+    .line2{
+      flex-grow: 1;
+      .customer{
+       border: 1px solid #ddd;
+        width: 100%;
+        display: flex;
+        padding: 10px;
         align-items: center;
-        flex-wrap: wrap;
-        .inside {
-            background-color: $section-color;
-            padding: 5px 10px;
-            border-radius: 10px;
-            flex-grow: 1;
-          .flex {
-            align-items: center;
-            gap: 10px;
-            i {
-              font-size: 40px;
-              color: $main-Color;
+        gap: 10px;
+        p{
+          font-size: 12px;
+        }i{
+          color: $font-ddd;
+        }
+        .icon{
+          background-color: $main-Color;
+          color: white;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 25px;
+          border-radius: 50%;
+        }
+        a{
+          &:hover{
+            text-decoration: line-through;
+            color: red;
+          }
+        }
+      }
+      .related-hotels{
+        h1{
+          margin: 30px 0px;
+          margin-bottom: 0;
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          padding-bottom: 10px;
+          border-bottom: 2px solid #ddd;
+          span {
+            display: block;
+            width: 3px ;
+            height: 30px;
+            background-color: $main-Color;
+          }
+        }
+        .all{
+          display: flex;
+          padding: 10px 0px;
+          gap: 10px;
+          border-bottom: 2px solid #ddd;
+          img{
+            width: 90px;
+          }
+          .rate{
+            display: flex;
+            gap: 2px;
+            i{
+              color: orange;
+              font-size: 12px;
             }
-            .con {
-              p:first-of-type {
-                font-size: 20px;
-                color: $main-Color;
-              }
-              p {
-                color: $font-ddd;
-              }
+          }
+          a{
+            display: block;
+            cursor: pointer;
+            margin: 2px 0px;
+          }
+          p{
+            font-size: 13px;
+            span{
+              color: $font-ddd;
+              font-size: 18px;
+            }
+          }
+          &:last-of-type{
+            border: none;
+          }
+        }
+      }
+      .type{
+        margin-top: 20px;
+        h1{
+          margin: 30px 0px;
+          margin-bottom: 0;
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          padding-bottom: 10px;
+          border-bottom: 2px solid #ddd;
+          span {
+            display: block;
+            width: 3px ;
+            height: 30px;
+            background-color: $main-Color;
+          }
+        }
+        .togther {
+          display: flex;
+          gap: 10px;
+          margin-top: 10px;
+          align-items: center;
+          transition: $transtions;
+          &:hover{
+            margin-left: 20px;
+          }
+          span{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid $font-ddd;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            i{
+              font-size: 10px;
+              color: $font-ddd;
+              transform: translateY(1.2px);
             }
           }
         }
       }
-    }
-    .line2 {
-      flex-basis: 20%;
     }
   }
 }
 
 // slider line 1
 
-.box3 {
-  margin-top: 40px;
-  .swiper {
-    margin-bottom: 20px;
-    max-width: 100%;
-    height: 400px;
-    .swiper-wrapper {
-      .swiper-slide {
-        background-position: center;
-        background-size: cover;
-        img {
-          display: block;
-          width: 100%;
+.box2 {
+  .control-dots {
+    display: none ;
+  }
+  .slider-wrapper {
+    .slide {
+      height: 400px !important;
+      .all{
+        height: 100%;
+        position: relative;
+        .flow {
+          position: absolute;
+        }
+        .icon {
+          font-size: 20px;
+          color: white;
+          background-color: $main-Color;
+          padding: 4px;
+          border-radius: 5px;
+          z-index: 500;
+          &:hover {
+            color: red ;
+          }
+          &.click {
+            color: red;
+          }
+          transition: $transtions;
+          cursor: pointer;
+        }
+        .btns{
+          left: 2%;
+          top: 2%;
+          display: flex;
+          gap: 10px;
+
+        }
+        img{
           height: 100%;
-          border-radius: 20px;
+          object-fit: cover;
         }
       }
     }
   }
-
-  .heading {
-    flex-basis: 70%;
-    p {
-      color: $font-ddd;
-    }
-  }
-}
-
-.line2 {
-  position: relative;
-  .pref {
-    padding: 5px 10px;
-    border: 2px solid $font-ddd;
+  .control-arrow {
+    background-color: $main-Color !important;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
-  }
-  .equations {
-    .part,
-    .end {
-      h1 {
-        text-transform: capitalize;
-      }
-      padding: 20px 10px;
-      border-width: 0px 2px 2px 2px;
-      border-style: solid;
-      border-color: $font-ddd;
+    top: 50% !important;
+    opacity: 0.7 !important;
+    &:hover {
+      opacity: 1 !important;
     }
-    .part3,
-    .part4 {
-      display: flex;
-      justify-content: space-between;
-      span {
-        border-radius: 50%;
-        width: 20px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        height: 20px;
-        border: 2px solid $main-Color;
-        background-color: $main-Color;
-        color: white;
-        font-weight: 700;
-        cursor: pointer;
-        &:nth-of-type(2) {
-          border: none;
-          border-radius: 0;
-          background-color: transparent;
-          color: $font-ddd;
+    &.control-next {
+      transform: translate(-20%, -50%) !important;
+    }
+    &.control-prev{
+      transform: translate(20%, -50%) !important;
+    }
+  }
+  .thumbs-wrapper{
+    margin: 20px 0px !important;
+    ul{
+      li{
+        width: 120px !important;
+        height: 100px;
+        img{
+          height: 100%;
         }
       }
     }
-    .from {
-      span {
-        text-decoration: line-through;
-        font-size: 14px;
+    .control-arrow{
+      display: none;
+    }
+  }
+  .heading{
+    .stage2{
+      margin-top: 20px;
+      h3{
         color: $main-Color;
       }
-    }
-    .end {
-      text-align: center;
-      button {
-        background-color: $main-Color;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 8px;
-        width: 90%;
-        margin: 0 auto;
+      ul{
+        margin-left: 20px;
+        li{
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-top: 10px;
+          span{
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid $main-Color;
+          }
+        }
       }
     }
   }
-  .trigger {
-    display: none;
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background-color: white;
-    font-size: 22px;
-    background-color: $main-Color;
-    padding: 5px 10px;
-    font-weight: bold;
-    color: white;
-  }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1300px) {
   .single {
     .big {
-        .line1{
-            max-width: 100%;
-        }
-      .line2 {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        transform: translateY(100%);
-        &.show {
-          transform: translateY(0);
-        }
-        border-radius: 0;
-        width: 320px;
-        z-index: 1000;
-        background-color: white;
-        border-top-right-radius: 10px;
-        .text {
-          color: black;
-          font-size: 20px;
-        }
-        .trigger {
-          display: block;
-        }
-        .pref ,.part , .end{
-            border-radius: 5px;
-        }
+      flex-direction: column;
+      .line1 {
+        max-width: 100%;
+      }
+      .line2{
+        max-width: 100%;
       }
     }
   }
 }
 
-@media (max-width: 1399px) {
+@media (max-width: 700px) {
   .single {
     .big {
-      .line2 {
-        transition: $transtions;
+      .line1 {
+        .box1 {
+          flex-direction: column;
+          align-items: start;
+          h4 {
+            margin-bottom: 0 !important;
+          }
+        }
+        .box3 {
+          flex-direction: column;
+        }
       }
     }
   }
 }
-
-@media(max-width: 700px) {
-    .single{
-        .big{
-            .line1{
-                .box1{
-                    flex-direction: column;
-                    align-items: start;
-                    h4{
-                        margin-bottom: 0 !important;
-                    }
-                }
-                .box2{
-                    .inside{
-                        // flex-grow: 0;
-                        i{
-                            font-size: 20px !important;
-                        }
-                        p{
-                            font-size: 20px;
-                            &:last-of-type{
-                                font-size: 15px;
-                            }
-                        }
-                    }
-                    align-items: start;
-                }
-                .box3{
-                    flex-direction: column;
-                    .swiper{
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-}
-

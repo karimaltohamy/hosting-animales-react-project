@@ -35,7 +35,7 @@
         .rate {
           display: flex;
           width: 100%;
-          justify-content: space-between;
+          gap: 5px;
           font-size: 15px;
           align-items: center;
           p:nth-of-type(1){
@@ -58,6 +58,7 @@
           padding: 2px 6px;
           border-radius: 4px;
           font-weight: bold;
+          margin-top: 10px;
         }
       }
       .swiper-wrapper{
