@@ -22,5 +22,18 @@
   "status": "الحالة",
   "animal_type": "نوع الحيوان ",
   "hosting_duration": "مددة الاستضافة ",
-  "price": "السعر"
+  "price": "السعر",
+  "hosting": "الاستضافات",
+  "hosts": "المستضيفين",
+  "clinics": "العيادات",
+  "exercises": "التدريبات",
+  "search_for_hotel": "البحث عن فندق",
+  "hotels_found": "تم العثور على فندق",
+  "sort_by": "ترتيب حسب",
+  "filter_by": "مصنف بواسطة",
+  "hotel_star": "فندق ستار",
+  "review_score": "نقاط المراجعة",
+  "property_type": "نوع الملكية",
+  "facilities": "مرافق",
+  "filter_price": "سعر التصفية"
 }

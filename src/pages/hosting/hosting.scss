@@ -1,0 +1,15 @@
+.banner_page {
+  background-image: url(../../assets/images/banner-search-hotel.jpg);
+
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    h1 {
+      font-size: 35px;
+      font-weight: 600;
+      color: white;
+    }
+  }
+}

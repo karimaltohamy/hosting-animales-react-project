@@ -22,5 +22,18 @@
   "status": "Status",
   "animal_type": "Animal Type",
   "hosting_duration": "Hosting Duration",
-  "price": "Price"
+  "price": "Price",
+  "hosting": "Hosting",
+  "hosts": "Hosts",
+  "clinics": "Clinics",
+  "exercises": "Exercises",
+  "search_for_hotel": "Search For Hotel",
+  "hotels_found": "Hotel Found",
+  "sort_by": "Sort by",
+  "filter_by": "Filter By",
+  "hotel_star": "Hotel Star",
+  "review_score": "Review Score",
+  "property_type": "Property Type",
+  "facilities": "Facilities",
+  "filter_price": "Filter Price"
 }

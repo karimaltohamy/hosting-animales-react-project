@@ -29,7 +29,7 @@ const SearchSection = () => {
 
   return (
     <div className="container">
-      <div className="mt-4  rounded-lg border-2 border-primary search_section">
+      <div className="mt-4  rounded-lg border-2 border-primary search_section bg-white">
         <div className="categories flex items-center justify-center flex-wrap gap-1">
           <div className="item active">
             <MdOutlineHotel size={18} />
