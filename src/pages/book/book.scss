@@ -1,8 +1,7 @@
 @import "../../assets/variables.scss";
 
-
-body.ar{
-  .slider-wrapper{
+body.ar {
+  .slider-wrapper {
     direction: rtl !important;
   }
 }
@@ -10,7 +9,7 @@ body.ar{
 .single {
   min-height: 580vh;
   position: relative;
-  .img {
+  & > .img {
     background-image: url("../../assets/images/banner.jpg");
     background-position: center;
     background-size: cover;
@@ -77,21 +76,22 @@ body.ar{
         }
       }
     }
-    .line2{
+    .line2 {
       flex-grow: 1;
-      .customer{
-       border: 1px solid #ddd;
+      .customer {
+        border: 1px solid #ddd;
         width: 100%;
         display: flex;
         padding: 10px;
         align-items: center;
         gap: 10px;
-        p{
+        p {
           font-size: 12px;
-        }i{
+        }
+        i {
           color: $font-ddd;
         }
-        .icon{
+        .icon {
           background-color: $main-Color;
           color: white;
           width: 50px;
@@ -102,15 +102,15 @@ body.ar{
           font-size: 25px;
           border-radius: 50%;
         }
-        a{
-          &:hover{
+        a {
+          &:hover {
             text-decoration: line-through;
             color: red;
           }
         }
       }
-      .related-hotels{
-        h1{
+      .related-hotels {
+        h1 {
           margin: 30px 0px;
           margin-bottom: 0;
           display: flex;
@@ -120,47 +120,47 @@ body.ar{
           border-bottom: 2px solid #ddd;
           span {
             display: block;
-            width: 3px ;
+            width: 3px;
             height: 30px;
             background-color: $main-Color;
           }
         }
-        .all{
+        .all {
           display: flex;
           padding: 10px 0px;
           gap: 10px;
           border-bottom: 2px solid #ddd;
-          img{
+          img {
             width: 90px;
           }
-          .rate{
+          .rate {
             display: flex;
             gap: 2px;
-            i{
+            i {
               color: orange;
               font-size: 12px;
             }
           }
-          a{
+          a {
             display: block;
             cursor: pointer;
             margin: 2px 0px;
           }
-          p{
+          p {
             font-size: 13px;
-            span{
+            span {
               color: $font-ddd;
               font-size: 18px;
             }
           }
-          &:last-of-type{
+          &:last-of-type {
             border: none;
           }
         }
       }
-      .type{
+      .type {
         margin-top: 20px;
-        h1{
+        h1 {
           margin: 30px 0px;
           margin-bottom: 0;
           display: flex;
@@ -170,7 +170,7 @@ body.ar{
           border-bottom: 2px solid #ddd;
           span {
             display: block;
-            width: 3px ;
+            width: 3px;
             height: 30px;
             background-color: $main-Color;
           }
@@ -181,20 +181,23 @@ body.ar{
           margin-top: 10px;
           align-items: center;
           transition: $transtions;
-          &:hover{
+          p {
+            color: $font-ddd;
+          }
+          &:hover {
             margin-left: 20px;
           }
-          span{
+          span {
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 2px solid $font-ddd;
+            border: 2px solid $main-Color;
             width: 15px;
             height: 15px;
             border-radius: 50%;
-            i{
+            i {
               font-size: 10px;
-              color: $font-ddd;
+              color: $main-Color;
               transform: translateY(1.2px);
             }
           }
@@ -208,12 +211,15 @@ body.ar{
 
 .box2 {
   .control-dots {
-    display: none ;
+    display: none;
+  }
+  p {
+    color: $font-ddd;
   }
   .slider-wrapper {
     .slide {
       height: 400px !important;
-      .all{
+      .all {
         height: 100%;
         position: relative;
         .flow {
@@ -227,7 +233,7 @@ body.ar{
           border-radius: 5px;
           z-index: 500;
           &:hover {
-            color: red ;
+            color: red;
           }
           &.click {
             color: red;
@@ -235,14 +241,13 @@ body.ar{
           transition: $transtions;
           cursor: pointer;
         }
-        .btns{
+        .btns {
           left: 2%;
           top: 2%;
           display: flex;
           gap: 10px;
-
         }
-        img{
+        img {
           height: 100%;
           object-fit: cover;
         }
@@ -265,39 +270,40 @@ body.ar{
     &.control-next {
       transform: translate(-20%, -50%) !important;
     }
-    &.control-prev{
+    &.control-prev {
       transform: translate(20%, -50%) !important;
     }
   }
-  .thumbs-wrapper{
+  .thumbs-wrapper {
     margin: 20px 0px !important;
-    ul{
-      li{
+    ul {
+      li {
         width: 120px !important;
         height: 100px;
-        img{
+        img {
           height: 100%;
         }
       }
     }
-    .control-arrow{
+    .control-arrow {
       display: none;
     }
   }
-  .heading{
-    .stage2{
+  .heading {
+    .stage2 {
       margin-top: 20px;
-      h3{
+      h3 {
         color: $main-Color;
       }
-      ul{
+      ul {
         margin-left: 20px;
-        li{
+        li {
           display: flex;
           align-items: center;
           gap: 10px;
+          color: $font-ddd;
           margin-top: 10px;
-          span{
+          span {
             display: block;
             width: 10px;
             height: 10px;
@@ -317,7 +323,7 @@ body.ar{
       .line1 {
         max-width: 100%;
       }
-      .line2{
+      .line2 {
         max-width: 100%;
       }
     }
@@ -337,6 +343,284 @@ body.ar{
         }
         .box3 {
           flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+// box3 =>
+
+.search {
+  background-color: white;
+  margin-top: 20px;
+  border: 1px solid $main-Color;
+  padding: 20px;
+  box-shadow: 0px 0px 40px #ddd;
+  height: fit-content;
+  .core {
+    display: flex;
+    @media (max-width: 640px) {
+      flex-direction: column;
+      gap: 10px;
+      .btn {
+        padding: 3px 0px;
+      }
+    }
+    .box {
+      border: 1px solid $section-color;
+      background-color: white;
+      flex-grow: 1;
+      padding: 10px 20px;
+      position: relative;
+      cursor: pointer;
+      .inside {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: $main-Color;
+        i {
+          color: $main-Color;
+          &.small {
+            margin: 0px 8px;
+          }
+          font-size: 18px;
+          &.small {
+            font-size: 12px;
+          }
+        }
+      }
+      .flow {
+        position: absolute;
+        top: 100%;
+        z-index: 3000;
+
+        height: fit-content;
+        left: 0;
+        i.close {
+          position: absolute;
+          right: 10px;
+          font-size: 12px;
+          cursor: pointer;
+          background-color: $main-Color;
+          z-index: 1000;
+          color: white;
+          padding: 3px 5px;
+          border-radius: 5px;
+        }
+        padding: 20px 10px;
+        background-color: white;
+        box-shadow: 0px 0px 10px $section-color;
+        width: 100%;
+        &.setNumber {
+          h3 {
+            margin-bottom: 10px;
+          }
+          input {
+            border-radius: 5px;
+            padding: 5px 10px;
+            border: 1px solid $main-Color;
+            outline: none;
+            width: 90%;
+          }
+        }
+      }
+    }
+    .btn {
+      background-color: $main-Color;
+      flex-grow: 1;
+      display: flex;
+      min-width: 70px;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+body.ar {
+  .box3 {
+    .flow {
+      i.close {
+        right: 90% !important;
+      }
+    }
+  }
+}
+
+.result {
+  margin: 20px 0px;
+  .all {
+    padding-bottom: 40px;
+    border: 1px solid $section-color;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .img {
+      position: relative;
+      .flow {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.373);
+        color: white;
+        display: flex;
+        gap: 5px;
+        right: 0%;
+        bottom: 0;
+        cursor: pointer;
+        align-items: center;
+        flex-direction: row-reverse;
+        padding: 2px 4px;
+      }
+    }
+  }
+  img {
+    width: 150px;
+    height: 150px;
+  }
+  .inside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h1 {
+      font-size: 20px;
+      color: $main-Color;
+    }
+    .pref {
+      gap: 20px;
+      display: flex;
+      .icon-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        padding: 8px;
+        border-radius: 10px;
+        color: $font-ddd;
+        font-weight: bold;
+        i {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+// END box3 =>
+
+// Rules =>
+.rules {
+  .row {
+    display: flex;
+    margin: 10px 0px;
+    h2 {
+      min-width: 120px;
+    }
+    span {
+      display: block;
+      color: $font-ddd;
+    }
+  }
+  .show {
+    color: $main-Color;
+    cursor: pointer;
+  }
+  .end {
+    margin-top: 10px;
+  }
+}
+
+// map =>
+
+map {
+  display: block;
+  margin: 20px 0px;
+  .full {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.box {
+  display: flex;
+  border: 2px solid #ddd;
+  padding: 20px;
+  div {
+    width: 40%;
+    &:last-child {
+      width: 60%;
+    }
+  }
+  .rate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: $font-ddd;
+    span {
+      &.size {
+        font-size: 40px;
+      }
+      color: $main-Color;
+    }
+  }
+  .calc {
+    .ex {
+      width: 100%;
+      display: flex;
+      margin: 10px 0px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      h1 {
+        min-width: 70px;
+        color: $font-ddd;
+      }
+      span {
+        color: $font-ddd;
+      }
+      span:first-of-type {
+        flex-grow: 1;
+        background-color: $section-color;
+        border-radius: 20px;
+        height: 10px;
+        position: relative;
+        &::before {
+          content: "";
+          background-color: $main-Color;
+          position: absolute;
+          width: 70%;
+          height: 100%;
+          border-radius: 20px;
+        }
+      }
+      &:nth-child(2) {
+        span:first-of-type {
+          &::before {
+            width: 40% !important;
+          }
+        }
+      }
+      &:nth-child(3) {
+        span:first-of-type {
+          &::before {
+            width: 0;
+          }
+        }
+      }
+      &:nth-child(4) {
+        span:first-of-type {
+          &::before {
+            width: 0;
+          }
+        }
+      }
+      &:nth-child(5) {
+        span:first-of-type {
+          &::before {
+            width: 0;
+          }
         }
       }
     }

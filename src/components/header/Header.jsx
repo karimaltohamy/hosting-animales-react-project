@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <header className="mb-5">
+    <header className="">
       <div className="container">
         <div className="flex items-center justify-between web">
           <Link to={"/"}>

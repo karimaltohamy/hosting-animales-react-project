@@ -7,6 +7,7 @@ import img4 from "../../assets/images/Hotels/hotel-575085_1920.jpg"
 import img5 from "../../assets/images/Hotels/houses-742290_1920.jpg"
 import img6 from "../../assets/images/Hotels/receptionists-5975962_1920.jpg"
 import "./topRatedHotels.scss"
+import { Link } from "react-router-dom";
 
 function TopRatedHotels() {    
   return <div className="topRated">
@@ -21,7 +22,7 @@ function TopRatedHotels() {
                         <img src={src} alt="" />
                         <p className="discount flow">30%</p>
                         <i className="fa-solid fa-heart icon flow"></i>
-                        <p className="flow overFlow"><span>{t("book_now")}</span></p>
+                        <Link to={"/book/hotel/2"} className="flow overFlow"><span>{t("book_now")}</span></Link>
                     </div>
                     <div className="con">
                         <div className="flex">
