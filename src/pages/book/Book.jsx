@@ -303,7 +303,7 @@ function Book() {
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
             </map>
-            <div className="review">
+            <div className="reviewDiv">
               <div className="heading">
                 <h1 className="Smaller">{t("Reviews")}</h1>
                 <div className="box">

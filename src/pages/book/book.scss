@@ -541,85 +541,87 @@ map {
   }
 }
 
-.box {
-  display: flex;
-  border: 2px solid #ddd;
-  padding: 20px;
-  div {
-    width: 40%;
-    &:last-child {
-      width: 60%;
-    }
-  }
-  .rate {
+.reviewDiv{
+  .box {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    color: $font-ddd;
-    span {
-      &.size {
-        font-size: 40px;
+    border: 2px solid #ddd;
+    padding: 20px;
+    div {
+      width: 40%;
+      &:last-child {
+        width: 60%;
       }
-      color: $main-Color;
     }
-  }
-  .calc {
-    .ex {
-      width: 100%;
+    .rate {
       display: flex;
-      margin: 10px 0px;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
+      flex-direction: column;
       gap: 10px;
-      h1 {
-        min-width: 70px;
-        color: $font-ddd;
-      }
+      color: $font-ddd;
       span {
-        color: $font-ddd;
+        &.size {
+          font-size: 40px;
+        }
+        color: $main-Color;
       }
-      span:first-of-type {
-        flex-grow: 1;
-        background-color: $section-color;
-        border-radius: 20px;
-        height: 10px;
-        position: relative;
-        &::before {
-          content: "";
-          background-color: $main-Color;
-          position: absolute;
-          width: 70%;
-          height: 100%;
+    }
+    .calc {
+      .ex {
+        width: 100%;
+        display: flex;
+        margin: 10px 0px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        h1 {
+          min-width: 70px;
+          color: $font-ddd;
+        }
+        span {
+          color: $font-ddd;
+        }
+        span:first-of-type {
+          flex-grow: 1;
+          background-color: $section-color;
           border-radius: 20px;
-        }
-      }
-      &:nth-child(2) {
-        span:first-of-type {
+          height: 10px;
+          position: relative;
           &::before {
-            width: 40% !important;
+            content: "";
+            background-color: $main-Color;
+            position: absolute;
+            width: 70%;
+            height: 100%;
+            border-radius: 20px;
           }
         }
-      }
-      &:nth-child(3) {
-        span:first-of-type {
-          &::before {
-            width: 0;
+        &:nth-child(2) {
+          span:first-of-type {
+            &::before {
+              width: 40% !important;
+            }
           }
         }
-      }
-      &:nth-child(4) {
-        span:first-of-type {
-          &::before {
-            width: 0;
+        &:nth-child(3) {
+          span:first-of-type {
+            &::before {
+              width: 0;
+            }
           }
         }
-      }
-      &:nth-child(5) {
-        span:first-of-type {
-          &::before {
-            width: 0;
+        &:nth-child(4) {
+          span:first-of-type {
+            &::before {
+              width: 0;
+            }
+          }
+        }
+        &:nth-child(5) {
+          span:first-of-type {
+            &::before {
+              width: 0;
+            }
           }
         }
       }

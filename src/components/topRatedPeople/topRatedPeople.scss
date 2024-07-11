@@ -132,6 +132,9 @@
 @media(max-width : 600px) {
     .topPeople{
         .container{
+          .all{
+            grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+          }
             h1{
                 font-size: 25px;
             }

@@ -21,32 +21,10 @@ function Clinics() {
       <div className="container">
         <h1>{t("Our_Clinics")}</h1>
         <h4>{t("most-popular-hostingers")}</h4>
-        <Swiper
-          effect="coverflow"
-          spaceBetween={20}
-          grabCursor={true}
-          loop={true}
-          centeredSlides={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 37,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[EffectCoverflow, Pagination, Autoplay]}
-        >
+
           {[img1, img2, img3, img4, img5, img6].map((src, i) => {
             return (
-              <SwiperSlide className="swiper-slide" key={i}>
+              <div className="swiper-slide" key={i}>
                 <div class="img">
                   <img src={src} alt="" />
                   <i className="fa-solid fa-heart icon flow"></i>
@@ -74,10 +52,9 @@ function Clinics() {
                   </div>
                   <button className="showMore">{t("Show_More")}</button>
                 </div>
-              </SwiperSlide>
+              </div>
             );
           })}
-        </Swiper>
       </div>
     </div>
   );

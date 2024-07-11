@@ -22,13 +22,15 @@ function Training() {
               <div class="box" key={i}>
                 <div class="img">
                   <img src={src} alt="" />
-                  <i className="fa-solid fa-heart icon flow"></i>
-                  <div className="rateStar">
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
+                  <div className="flow">
+                    <i className="fa-solid fa-heart icon "></i>
+                    <div className="rateStar">
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                    </div>
                   </div>
                 </div>
                 <div class="con">
