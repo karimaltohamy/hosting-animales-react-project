@@ -2,6 +2,7 @@
 
 .slide-container {
   position: relative;
+  margin-top: 20px;
 }
 
 .carousel.carousel-slider .control-arrow,
@@ -16,7 +17,6 @@
 .carousel {
   .thumbs {
     text-align: center;
-
     .thumb {
       border-radius: 8px;
       width: 150px !important;

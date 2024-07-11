@@ -14,7 +14,7 @@ function Training() {
   return (
     <div className="training">
       <div className="container">
-        <h1>Our Training</h1>
+        <h1>{t("Our_Training")}</h1>
         <h4>{t("most-popular-hostingers")}</h4>
         <div className="grid">
           {[img1, img2, img3, img4, img5, img6].map((src, i) => {
@@ -22,30 +22,32 @@ function Training() {
               <div class="box" key={i}>
                 <div class="img">
                   <img src={src} alt="" />
-                  <i className="fa-solid fa-heart icon flow"></i>
-                  <div className="rateStar">
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
+                  <div className="flow">
+                    <i className="fa-solid fa-heart icon "></i>
+                    <div className="rateStar">
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                    </div>
                   </div>
                 </div>
                 <div class="con">
                   <h2>
-                    name : <span> Test</span>
+                    {t("Name")} : <span> Test</span>
                   </h2>
                   <div className="rate">
                     <h1>
-                      4.8/5 <span>Excellent</span>
+                      4.8/5 <span>{t("Excellent")}</span>
                     </h1>
                     <p>*</p>
-                    <p> 4 Reviews</p>
+                    <p> 4 {t("Reviews")}</p>
                   </div>
                   <div className="price">
-                    price : <span>40$ / session</span>
+                    {t("price")} : <span>40$ / {t("Session")}</span>
                   </div>
-                  <button className="showMore">show More</button>
+                  <button className="showMore">{t("Show_More")}</button>
                 </div>
               </div>
             );

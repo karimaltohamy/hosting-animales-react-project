@@ -1,4 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
+<<<<<<< HEAD
+=======
+
+>>>>>>> db10ef1a535a22f8c10e14ee292e845c1cfefa33
 import {
   Accounts,
   Application,
@@ -13,6 +17,11 @@ import {
   Clinics,
   Exercises,
 } from "../pages";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> db10ef1a535a22f8c10e14ee292e845c1cfefa33
 import Loading from "../components/loading/Loading.jsx";
 import { Suspense } from "react";
 import Book from "../pages/book/Book.jsx";

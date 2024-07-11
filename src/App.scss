@@ -40,6 +40,10 @@ body {
     &.Smaller {
       font-size: 20px !important;
       font-weight: bold;
+      margin-bottom: 10px;
+    }
+    &.mt{
+      margin-top: 20px;
     }
   }
   & > h4 {
@@ -50,7 +54,7 @@ body {
     &.Smaller {
       font-size: 14px !important;
       font-weight: bold;
-      margin-bottom: 0;
+      margin-bottom: 0px;
     }
   }
 }
@@ -68,7 +72,7 @@ body {
 // style Jemy
 
 .container {
-  width: 90% !important;
+  width: 80% !important;
   margin: 0 auto;
 }
 
@@ -86,7 +90,6 @@ ul {
 button {
   border: none;
   background-color: transparent;
-
   &:hover {
     opacity: 0.8;
   }

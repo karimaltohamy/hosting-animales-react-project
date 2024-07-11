@@ -1,9 +1,15 @@
 @import "../../assets/variables.scss";
 
+body.ar {
+  .slider-wrapper {
+    direction: rtl !important;
+  }
+}
+
 .single {
   min-height: 580vh;
   position: relative;
-  .img {
+  & > .img {
     background-image: url("../../assets/images/banner.jpg");
     background-position: center;
     background-size: cover;
@@ -15,11 +21,6 @@
     margin-top: 60px;
     display: flex;
     gap: 20px;
-    .line {
-      border-radius: 10px;
-      padding: 20px;
-
-    }
     .line1 {
       flex-grow: 1;
       max-width: 80%;
@@ -39,7 +40,7 @@
             text-transform: capitalize;
             color: $main-Color2;
             font-size: 18px;
-            margin-bottom: 20px;
+            // margin-bottom: 20px;
           }
         }
         .con2 {
@@ -74,229 +75,556 @@
           }
         }
       }
-      .box2 {
-        border-top: 1px solid $font-ddd;
-        border-bottom: 1px solid $font-ddd;
-        gap: 20px;
-        padding: 30px 0px;
+    }
+    .line2 {
+      flex-grow: 1;
+      .customer {
+        border: 1px solid #ddd;
+        width: 100%;
+        display: flex;
+        padding: 10px;
         align-items: center;
-        flex-wrap: wrap;
-        .inside {
-            background-color: $section-color;
-            padding: 5px 10px;
-            border-radius: 10px;
-            flex-grow: 1;
-          .flex {
-            align-items: center;
-            gap: 10px;
+        gap: 10px;
+        p {
+          font-size: 12px;
+        }
+        i {
+          color: $font-ddd;
+        }
+        .icon {
+          background-color: $main-Color;
+          color: white;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 25px;
+          border-radius: 50%;
+        }
+        a {
+          &:hover {
+            text-decoration: line-through;
+            color: red;
+          }
+        }
+      }
+      .related-hotels {
+        h1 {
+          margin: 30px 0px;
+          margin-bottom: 0;
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          padding-bottom: 10px;
+          border-bottom: 2px solid #ddd;
+          span {
+            display: block;
+            width: 3px;
+            height: 30px;
+            background-color: $main-Color;
+          }
+        }
+        .all {
+          display: flex;
+          padding: 10px 0px;
+          gap: 10px;
+          border-bottom: 2px solid #ddd;
+          img {
+            width: 90px;
+          }
+          .rate {
+            display: flex;
+            gap: 2px;
             i {
-              font-size: 40px;
-              color: $main-Color;
+              color: orange;
+              font-size: 12px;
             }
-            .con {
-              p:first-of-type {
-                font-size: 20px;
-                color: $main-Color;
-              }
-              p {
-                color: $font-ddd;
-              }
+          }
+          a {
+            display: block;
+            cursor: pointer;
+            margin: 2px 0px;
+          }
+          p {
+            font-size: 13px;
+            span {
+              color: $font-ddd;
+              font-size: 18px;
+            }
+          }
+          &:last-of-type {
+            border: none;
+          }
+        }
+      }
+      .type {
+        margin-top: 20px;
+        h1 {
+          margin: 30px 0px;
+          margin-bottom: 0;
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          padding-bottom: 10px;
+          border-bottom: 2px solid #ddd;
+          span {
+            display: block;
+            width: 3px;
+            height: 30px;
+            background-color: $main-Color;
+          }
+        }
+        .togther {
+          display: flex;
+          gap: 10px;
+          margin-top: 10px;
+          align-items: center;
+          transition: $transtions;
+          p {
+            color: $font-ddd;
+          }
+          &:hover {
+            margin-left: 20px;
+          }
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid $main-Color;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            i {
+              font-size: 10px;
+              color: $main-Color;
+              transform: translateY(1.2px);
             }
           }
         }
       }
-    }
-    .line2 {
-      flex-basis: 20%;
     }
   }
 }
 
 // slider line 1
 
-.box3 {
-  margin-top: 40px;
-  .swiper {
-    margin-bottom: 20px;
-    max-width: 100%;
-    height: 400px;
-    .swiper-wrapper {
-      .swiper-slide {
-        background-position: center;
-        background-size: cover;
+.box2 {
+  .control-dots {
+    display: none;
+  }
+  p {
+    color: $font-ddd;
+  }
+  .slider-wrapper {
+    .slide {
+      height: 400px !important;
+      .all {
+        height: 100%;
+        position: relative;
+        .flow {
+          position: absolute;
+        }
+        .icon {
+          font-size: 20px;
+          color: white;
+          background-color: $main-Color;
+          padding: 4px;
+          border-radius: 5px;
+          z-index: 500;
+          &:hover {
+            color: red;
+          }
+          &.click {
+            color: red;
+          }
+          transition: $transtions;
+          cursor: pointer;
+        }
+        .btns {
+          left: 2%;
+          top: 2%;
+          display: flex;
+          gap: 10px;
+        }
         img {
-          display: block;
-          width: 100%;
           height: 100%;
-          border-radius: 20px;
+          object-fit: cover;
         }
       }
     }
   }
-
+  .control-arrow {
+    background-color: $main-Color !important;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50% !important;
+    opacity: 0.7 !important;
+    &:hover {
+      opacity: 1 !important;
+    }
+    &.control-next {
+      transform: translate(-20%, -50%) !important;
+    }
+    &.control-prev {
+      transform: translate(20%, -50%) !important;
+    }
+  }
+  .thumbs-wrapper {
+    margin: 20px 0px !important;
+    ul {
+      li {
+        width: 120px !important;
+        height: 100px;
+        img {
+          height: 100%;
+        }
+      }
+    }
+    .control-arrow {
+      display: none;
+    }
+  }
   .heading {
-    flex-basis: 70%;
-    p {
-      color: $font-ddd;
+    .stage2 {
+      margin-top: 20px;
+      h3 {
+        color: $main-Color;
+      }
+      ul {
+        margin-left: 20px;
+        li {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: $font-ddd;
+          margin-top: 10px;
+          span {
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid $main-Color;
+          }
+        }
+      }
     }
   }
 }
 
-.line2 {
-  position: relative;
-  .pref {
-    padding: 5px 10px;
-    border: 2px solid $font-ddd;
+@media (max-width: 1300px) {
+  .single {
+    .big {
+      flex-direction: column;
+      .line1 {
+        max-width: 100%;
+      }
+      .line2 {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .single {
+    .big {
+      .line1 {
+        .box1 {
+          flex-direction: column;
+          align-items: start;
+          h4 {
+            margin-bottom: 0 !important;
+          }
+        }
+        .box3 {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+// box3 =>
+
+.search {
+  background-color: white;
+  margin-top: 20px;
+  border: 1px solid $main-Color;
+  padding: 20px;
+  box-shadow: 0px 0px 40px #ddd;
+  height: fit-content;
+  .core {
+    display: flex;
+    @media (max-width: 640px) {
+      flex-direction: column;
+      gap: 10px;
+      .btn {
+        padding: 3px 0px;
+      }
+    }
+    .box {
+      border: 1px solid $section-color;
+      background-color: white;
+      flex-grow: 1;
+      padding: 10px 20px;
+      position: relative;
+      cursor: pointer;
+      .inside {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: $main-Color;
+        i {
+          color: $main-Color;
+          &.small {
+            margin: 0px 8px;
+          }
+          font-size: 18px;
+          &.small {
+            font-size: 12px;
+          }
+        }
+      }
+      .flow {
+        position: absolute;
+        top: 100%;
+        z-index: 3000;
+
+        height: fit-content;
+        left: 0;
+        i.close {
+          position: absolute;
+          right: 10px;
+          font-size: 12px;
+          cursor: pointer;
+          background-color: $main-Color;
+          z-index: 1000;
+          color: white;
+          padding: 3px 5px;
+          border-radius: 5px;
+        }
+        padding: 20px 10px;
+        background-color: white;
+        box-shadow: 0px 0px 10px $section-color;
+        width: 100%;
+        &.setNumber {
+          h3 {
+            margin-bottom: 10px;
+          }
+          input {
+            border-radius: 5px;
+            padding: 5px 10px;
+            border: 1px solid $main-Color;
+            outline: none;
+            width: 90%;
+          }
+        }
+      }
+    }
+    .btn {
+      background-color: $main-Color;
+      flex-grow: 1;
+      display: flex;
+      min-width: 70px;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+body.ar {
+  .box3 {
+    .flow {
+      i.close {
+        right: 90% !important;
+      }
+    }
+  }
+}
+
+.result {
+  margin: 20px 0px;
+  .all {
+    padding-bottom: 40px;
+    border: 1px solid $section-color;
     display: flex;
     align-items: center;
     gap: 20px;
-  }
-  .equations {
-    .part,
-    .end {
-      h1 {
-        text-transform: capitalize;
-      }
-      padding: 20px 10px;
-      border-width: 0px 2px 2px 2px;
-      border-style: solid;
-      border-color: $font-ddd;
-    }
-    .part3,
-    .part4 {
-      display: flex;
-      justify-content: space-between;
-      span {
-        border-radius: 50%;
-        width: 20px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        height: 20px;
-        border: 2px solid $main-Color;
-        background-color: $main-Color;
+    .img {
+      position: relative;
+      .flow {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.373);
         color: white;
-        font-weight: 700;
+        display: flex;
+        gap: 5px;
+        right: 0%;
+        bottom: 0;
         cursor: pointer;
-        &:nth-of-type(2) {
-          border: none;
-          border-radius: 0;
-          background-color: transparent;
-          color: $font-ddd;
+        align-items: center;
+        flex-direction: row-reverse;
+        padding: 2px 4px;
+      }
+    }
+  }
+  img {
+    width: 150px;
+    height: 150px;
+  }
+  .inside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h1 {
+      font-size: 20px;
+      color: $main-Color;
+    }
+    .pref {
+      gap: 20px;
+      display: flex;
+      .icon-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        padding: 8px;
+        border-radius: 10px;
+        color: $font-ddd;
+        font-weight: bold;
+        i {
+          font-size: 20px;
         }
       }
     }
-    .from {
+  }
+}
+
+// END box3 =>
+
+// Rules =>
+.rules {
+  .row {
+    display: flex;
+    margin: 10px 0px;
+    h2 {
+      min-width: 120px;
+    }
+    span {
+      display: block;
+      color: $font-ddd;
+    }
+  }
+  .show {
+    color: $main-Color;
+    cursor: pointer;
+  }
+  .end {
+    margin-top: 10px;
+  }
+}
+
+// map =>
+
+map {
+  display: block;
+  margin: 20px 0px;
+  .full {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.reviewDiv{
+  .box {
+    display: flex;
+    border: 2px solid #ddd;
+    padding: 20px;
+    div {
+      width: 40%;
+      &:last-child {
+        width: 60%;
+      }
+    }
+    .rate {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      color: $font-ddd;
       span {
-        text-decoration: line-through;
-        font-size: 14px;
+        &.size {
+          font-size: 40px;
+        }
         color: $main-Color;
       }
     }
-    .end {
-      text-align: center;
-      button {
-        background-color: $main-Color;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 8px;
-        width: 90%;
-        margin: 0 auto;
-      }
-    }
-  }
-  .trigger {
-    display: none;
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background-color: white;
-    font-size: 22px;
-    background-color: $main-Color;
-    padding: 5px 10px;
-    font-weight: bold;
-    color: white;
-  }
-}
-
-@media (max-width: 1400px) {
-  .single {
-    .big {
-        .line1{
-            max-width: 100%;
+    .calc {
+      .ex {
+        width: 100%;
+        display: flex;
+        margin: 10px 0px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        h1 {
+          min-width: 70px;
+          color: $font-ddd;
         }
-      .line2 {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        transform: translateY(100%);
-        &.show {
-          transform: translateY(0);
+        span {
+          color: $font-ddd;
         }
-        border-radius: 0;
-        width: 320px;
-        z-index: 1000;
-        background-color: white;
-        border-top-right-radius: 10px;
-        .text {
-          color: black;
-          font-size: 20px;
+        span:first-of-type {
+          flex-grow: 1;
+          background-color: $section-color;
+          border-radius: 20px;
+          height: 10px;
+          position: relative;
+          &::before {
+            content: "";
+            background-color: $main-Color;
+            position: absolute;
+            width: 70%;
+            height: 100%;
+            border-radius: 20px;
+          }
         }
-        .trigger {
-          display: block;
-        }
-        .pref ,.part , .end{
-            border-radius: 5px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1399px) {
-  .single {
-    .big {
-      .line2 {
-        transition: $transtions;
-      }
-    }
-  }
-}
-
-@media(max-width: 700px) {
-    .single{
-        .big{
-            .line1{
-                .box1{
-                    flex-direction: column;
-                    align-items: start;
-                    h4{
-                        margin-bottom: 0 !important;
-                    }
-                }
-                .box2{
-                    .inside{
-                        // flex-grow: 0;
-                        i{
-                            font-size: 20px !important;
-                        }
-                        p{
-                            font-size: 20px;
-                            &:last-of-type{
-                                font-size: 15px;
-                            }
-                        }
-                    }
-                    align-items: start;
-                }
-                .box3{
-                    flex-direction: column;
-                    .swiper{
-                        width: 100%;
-                    }
-                }
+        &:nth-child(2) {
+          span:first-of-type {
+            &::before {
+              width: 40% !important;
             }
+          }
         }
+        &:nth-child(3) {
+          span:first-of-type {
+            &::before {
+              width: 0;
+            }
+          }
+        }
+        &:nth-child(4) {
+          span:first-of-type {
+            &::before {
+              width: 0;
+            }
+          }
+        }
+        &:nth-child(5) {
+          span:first-of-type {
+            &::before {
+              width: 0;
+            }
+          }
+        }
+      }
     }
+  }
 }
-

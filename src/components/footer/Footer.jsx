@@ -1,13 +1,14 @@
 import React from "react";
 import "./footer.scss"
 import footerLogo from "../../assets/images/bird-2374419_1920.jpg"
+import { t } from "i18next";
 
 function Footer() {
   return (
     <footer>
       <div class="container">
         <div class="footer_top">
-          <h4>Follow us</h4>
+          <h4>{t("Follow_Us")}</h4>
           <div class="social_media">
             <a href="#">
               <i class="fa-brands fa-facebook-f"></i>
@@ -33,17 +34,17 @@ function Footer() {
             </div>
             <div class="links">
               <a href="contact.html" class="link">
-                Contact Us
+                {t("Contact_Us")}
               </a>
               <a href="#" class="link">
-                who are we
+              {t("Who_are_We")}
               </a>
               <a href="#" class="link">
-                privacy policy
+              {t("Privacy_Policy")}
               </a>
             </div>
           </div>
-          <p>© 2024. All rights reserved by 5Code.</p>
+          <p>{t("All_Rights")}</p>
         </div>
       </div>
     </footer>
