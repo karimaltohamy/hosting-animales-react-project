@@ -541,10 +541,19 @@ map {
   }
 }
 
-.reviewDiv{
+.reviewDiv {
   .box {
     display: flex;
     border: 2px solid #ddd;
+    @media (max-width: 600px) {
+      flex-direction: column;
+      align-items: center;
+      .rate {
+        border: none;
+        border-bottom: 2px solid $section-color;
+        padding-bottom: 20px;
+      }
+    }
     padding: 20px;
     div {
       width: 40%;
@@ -623,6 +632,42 @@ map {
               width: 0;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+// comments
+
+.line1 {
+  .comments {
+    margin: 20px 0px;
+    width: 100%;
+    .swiper-wrapper {
+      .swiper-slide {
+        font-size: 18px;
+        padding: 20px;
+        background: $section-color;
+        border-radius: 10px;
+        .icon{
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          i{
+            color: white;
+            font-size: 20px;
+            background-color: $font-ddd;
+            padding: 10px;
+            border-radius: 50%;
+          }
+        }
+        i{
+          color: orange;
+          font-size: 14px;
+        }
+        p:last-of-type{
+          font-size: 14px;
         }
       }
     }

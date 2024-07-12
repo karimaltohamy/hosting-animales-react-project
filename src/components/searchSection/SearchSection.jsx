@@ -28,22 +28,22 @@ const SearchSection = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container" data-aos="zoom-in">
       <div className="mt-4  rounded-lg border-2 border-primary search_section bg-white">
         <div className="categories flex items-center justify-center flex-wrap gap-1">
-          <div className="item active">
+          <div className="item active" data-aos="fade-left" data-aos-delay="400">
             <MdOutlineHotel size={18} />
             <span>Hotel</span>
           </div>
-          <div className="item">
+          <div className="item" data-aos="fade-left" data-aos-delay="400">
             <FaPerson size={18} />
             <span>Persons</span>
           </div>
-          <div className="item">
+          <div className="item" data-aos="fade-right" data-aos-delay="400">
             <CgGym size={18} />
             <span>Exercises</span>
           </div>
-          <div className="item">
+          <div className="item" data-aos="fade-right" data-aos-delay="400">
             <RiPsychotherapyLine size={18} />
             <span>Treatment</span>
           </div>

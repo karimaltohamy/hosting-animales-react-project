@@ -60,6 +60,9 @@ const Header = () => {
               <Link to={"/exercises"} className="link">
                 {t("exercises")}
               </Link>
+              <Link to={"/contact"} className="link">
+                {t("contact_Us")}
+              </Link>
             </div>
 
             <div className="flex items-center gap-3">

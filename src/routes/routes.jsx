@@ -1,8 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-<<<<<<< HEAD
-=======
 
->>>>>>> db10ef1a535a22f8c10e14ee292e845c1cfefa33
 import {
   Accounts,
   Application,
@@ -17,15 +14,13 @@ import {
   Clinics,
   Exercises,
 } from "../pages";
-<<<<<<< HEAD
-=======
 
-
->>>>>>> db10ef1a535a22f8c10e14ee292e845c1cfefa33
 import Loading from "../components/loading/Loading.jsx";
 import { Suspense } from "react";
 import Book from "../pages/book/Book.jsx";
-import LoginAsHostinger from "../pages/loginAs/LoginAsHostinger.jsx";
+import SignUpAsHostinger from "../pages/signAs/SignUpAsHostinger.jsx";
+import SignUser from "../pages/signUser/SignUser.jsx";
+import Contact from "../pages/contactUs/Contact.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -127,6 +122,14 @@ export const router = createBrowserRouter([
           </Suspense>
         ),
       },
+      {
+        path: "/contact",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Contact />
+          </Suspense>
+        ),
+      },
     ],
   },
   {
@@ -138,10 +141,18 @@ export const router = createBrowserRouter([
     ),
   },
   {
-    path: "/loginAsHostinger",
+    path: "/signUpAsHostinger",
     element: (
       <Suspense fallback={<Loading />}>
-        <LoginAsHostinger />
+        <SignUpAsHostinger />
+      </Suspense>
+    ),
+  },
+  {
+    path: "/signUpUser",
+    element: (
+      <Suspense fallback={<Loading />}>
+        <SignUser />
       </Suspense>
     ),
   },

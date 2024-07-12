@@ -36,7 +36,7 @@ const Login = () => {
                 />
               </div>
               <div className="input_item">
-                <label htmlFor=""> {t("password")} </label>
+                <label htmlFor=""> {t("Password")} </label>
                 <input
                   type="password"
                   placeholder={t("Enter your password")}

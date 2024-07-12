@@ -11,13 +11,19 @@ import img6 from "../../assets/images/Hotels/receptionists-5975962_1920.jpg";
 function TopRatedPeople() {
   return (
     <div className="topPeople">
-      <div className="container">
+      <div className="container" data-aos="zoom-in">
         <h1>{t("Our_Best_Personal_Keepers")}</h1>
         <h4>{t("most-popular-hostingers")}</h4>
         <div class="all">
           {[img1, img2, img3, img4, img5, img6].map((src, i) => {
             return (
-              <div class="sox" key={i}>
+              <div
+                class="sox"
+                key={i}
+                data-aos="fade-right"
+                data-aos-delay="400"
+                data-aos-duration="500"
+              >
                 <div class="image">
                   <img src={src} alt="" />
                   <i className="fa-solid fa-heart icon flow"></i>
@@ -29,8 +35,8 @@ function TopRatedPeople() {
                     Nostrum repudiandae unde ullam mollitia ex voluptate.
                   </p>
                   <div className="info">
-                  <a href="">{t("book_now")}</a>
-                  <h1>200$</h1>
+                    <a href="">{t("book_now")}</a>
+                    <h1>200$</h1>
                   </div>
                 </div>
               </div>

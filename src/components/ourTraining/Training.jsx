@@ -13,13 +13,19 @@ import "./Training.scss";
 function Training() {
   return (
     <div className="training">
-      <div className="container">
+      <div className="container" data-aos="zoom-in">
         <h1>{t("Our_Training")}</h1>
         <h4>{t("most-popular-hostingers")}</h4>
         <div className="grid">
           {[img1, img2, img3, img4, img5, img6].map((src, i) => {
             return (
-              <div class="box" key={i}>
+              <div
+                class="box"
+                key={i}
+                data-aos="fade-left"
+                data-aos-delay="400"
+                data-aos-duration="500"
+              >
                 <div class="img">
                   <img src={src} alt="" />
                   <div className="flow">

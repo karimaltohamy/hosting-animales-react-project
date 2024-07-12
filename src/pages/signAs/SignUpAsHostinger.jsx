@@ -1,30 +1,25 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { t } from "i18next";
 import logo from "../../assets/images/bird-2374419_1920.jpg";
-import "./loginAs.scss";
+import "./signAs.scss";
 
-const LoginAsHostinger = () => {
+const SignUpAsHostinger = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [languages, setLanguages] = useState([]);
-  const [lang, setLang] = useState("en");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const { i18n } = useTranslation();
 
   return (
     <Fragment>
-      <div className="loginAs">
+      <div className="signAs">
         <div className="line">
           <div className="logo">
             <img src={logo} alt="" loading="lazy" />
           </div>
-
-          <form >
+          <form>
             <div className="text">
-              <h3>{t("Start With Us")}</h3>
+              <h3>{t("Start_With_Us")}</h3>
             </div>
             <div className="input_item">
               <label htmlFor=""> {t("username")} </label>
@@ -44,7 +39,15 @@ const LoginAsHostinger = () => {
               />
             </div>
             <div className="input_item">
-              <label htmlFor=""> {t("Phone")} </label>
+              <label htmlFor=""> {t("Password")} </label>
+              <input
+                type="password"
+                placeholder={t("Enter your Password")}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <div className="input_item">
+              <label htmlFor=""> {t("phone")} </label>
               <input
                 type="number"
                 placeholder={t("Enter your Email")}
@@ -57,13 +60,13 @@ const LoginAsHostinger = () => {
                 <input type="number" placeholder={t("Enter your Age")} />
               </div>
               <div className="bik">
-                <label htmlFor=""> {t("Host Place")} </label>
+                <label htmlFor=""> {t("PLace")} </label>
                 <input type="email" placeholder={t("Enter your Host Place")} />
               </div>
             </div>
-            <div className="input_item">
+            <div className="input_item flex">
               <div className="upload">
-                <label htmlFor=""> {t("Upload Photos For Your Place")} </label>
+                <label htmlFor=""> {t("Place_Photos")} </label>
                 <input
                   type="file"
                   multiple
@@ -72,7 +75,7 @@ const LoginAsHostinger = () => {
                 />
               </div>
               <div className="place">
-                <label htmlFor=""> {t("Natioanl Card Photo")} </label>
+                <label htmlFor=""> {t("Natioanl_Card_Photo")} </label>
                 <input type="file" />
               </div>
             </div>
@@ -87,4 +90,4 @@ const LoginAsHostinger = () => {
   );
 };
 
-export default LoginAsHostinger;
+export default SignUpAsHostinger;

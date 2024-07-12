@@ -5,7 +5,16 @@
   "book_now": "Book Now",
   "favorites": "Favorites",
   "email": "Email",
+  "Password" : "Password" ,
+  "Start_With_Us" : "Start With Us" ,
+  "Place_Photos" : "Place Photos" ,
+  "Natioanl_Card_Photo" : "Natioanl Card Photo" ,
   "phone": "Phone",
+  "Place" : "Place" ,
+  "contact_Us" : "contact Us" ,
+  "Get_In_Touch!" : "Get In Touch!" ,
+  "Need_Support!" : "Need Support!" ,
+  "Contact us for a quote , help to join the them." : "Contact us for a quote , help to join the them." ,
   "Country": "Country",
   "City": "City",
   "general": "General",
@@ -23,7 +32,6 @@
   "animal_type": "Animal Type",
   "hosting_duration": "Hosting Duration",
   "price": "Price",
-<<<<<<< HEAD
   "hosting": "Hosting",
   "hosts": "Hosts",
   "clinics": "Clinics",
@@ -36,8 +44,7 @@
   "review_score": "Review Score",
   "property_type": "Property Type",
   "facilities": "Facilities",
-  "filter_price": "Filter Price"
-=======
+  "filter_price": "Filter Price" ,
   "Location": "Location",
   "Description": "Description",
   "Highlights": "Highlights",
@@ -93,5 +100,4 @@
   "Average" : "Average" ,
   "Poor" : "Poor" ,
   "Terrible" : "Terrible"
->>>>>>> db10ef1a535a22f8c10e14ee292e845c1cfefa33
 }

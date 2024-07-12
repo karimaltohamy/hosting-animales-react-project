@@ -17,6 +17,11 @@ import { format } from "date-fns";
 import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
 import Popup from "../../components/PopUp-Slider/Popup";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
 function Book() {
   const [showTime, setShowTime] = useState(false);
@@ -308,9 +313,13 @@ function Book() {
                 <h1 className="Smaller">{t("Reviews")}</h1>
                 <div className="box">
                   <div className="rate">
-                    <h1><span className="size">4.7</span> /5</h1>
+                    <h1>
+                      <span className="size">4.7</span> /5
+                    </h1>
                     <h1>{t("Excellent")}</h1>
-                    <h1>{t("Based_On")} <span>3 {t("Reviews")}</span></h1>
+                    <h1>
+                      {t("Based_On")} <span>3 {t("Reviews")}</span>
+                    </h1>
                   </div>
                   <div className="calc">
                     <div className="ex">
@@ -341,6 +350,43 @@ function Book() {
                   </div>
                 </div>
               </div>
+            </div>
+            <Swiper
+              className="comments"
+              slidesPerView={3}
+              spaceBetween={10}
+              grabCursor={true}
+            >
+              {[...Array(4)].map((ele) => {
+                return (
+                  <SwiperSlide className="swiper-slide" key={ele}>
+                    <div className="icon">
+                      <i className="fa-solid fa-user"></i>
+                      <div className="con">
+                        <p>{new Date().toLocaleDateString()}</p>
+                        <p>15:32</p>
+                      </div>
+                    </div>
+                    <h1>Just Any Talk For Test</h1>
+                    <div className="rateStar">
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                      <i className="fa-solid fa-star"></i>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Debitis, magnam reprehenderit. Nobis ullam ipsam nemo illo
+                      saepe esse facere, ea quod explicabo voluptate sint ex
+                      incidunt ad quia in tempore!
+                    </p>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+            <div className="endInfo">
+              <h1></h1>
             </div>
           </div>
           <div className="line2">

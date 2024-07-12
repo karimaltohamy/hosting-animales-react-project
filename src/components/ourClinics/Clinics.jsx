@@ -18,13 +18,19 @@ import "swiper/css/pagination";
 function Clinics() {
   return (
     <div className="clinics">
-      <div className="container">
+      <div className="container" data-aos="zoom-in">
         <h1>{t("Our_Clinics")}</h1>
         <h4>{t("most-popular-hostingers")}</h4>
-
+        <div className="grid">
           {[img1, img2, img3, img4, img5, img6].map((src, i) => {
             return (
-              <div className="swiper-slide" key={i}>
+              <div
+                className="swiper-slide"
+                key={i}
+                data-aos="fade-right"
+                data-aos-delay="400"
+                data-aos-duration="500"
+              >
                 <div class="img">
                   <img src={src} alt="" />
                   <i className="fa-solid fa-heart icon flow"></i>
@@ -55,6 +61,7 @@ function Clinics() {
               </div>
             );
           })}
+        </div>
       </div>
     </div>
   );
